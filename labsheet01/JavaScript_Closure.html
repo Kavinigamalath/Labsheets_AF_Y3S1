@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Closure</h1>
+<p id="demo"></p>
+    <script>
+    
+    function greeting(){
+        let message = 'Hi';
+
+        function sayHi(){
+            document.getElementById('demo').innerHTML += message + '<br>';
+            console.log(message);
+        }
+        return sayHi
+    }
+
+    let hi=greeting();
+    hi();
+
+    </script>
+</body>
+</html>

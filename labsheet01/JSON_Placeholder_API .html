@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+ 
+<h2>JSON Placeholder API</h2> 
+ 
+<!--An application programming interface is a way for two or more 
+computer programs to communicate with each other.  
+    It is a type of software interface,  
+    offering a service to other pieces of software. --> 
+ 
+<p id="demo"></p> 
+ 
+<script> 
+ 
+//https://jsonplaceholder.typicode.com/ 
+//Free fake API for testing and prototyping. 
+ 
+fetch('https://jsonplaceholder.typicode.com/todos/1') 
+      .then(response => response.json()) 
+      .then(json => console.log(json)) 
+ 
+</script> 
+ 
+</body> 
+</html>

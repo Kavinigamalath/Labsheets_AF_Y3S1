@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Class Inheritance</h1>
+
+    <script>
+
+      class Car{
+        constructor(name,number){
+          // The constructor is a special method for creating and initializing an object created with a class.
+          // The constructor method is called automatically when a new object is created.
+          // The this keyword refers to the current instance of the class.
+          this.brand = name;
+          this.number = number;
+        
+      }
+        present(){
+          return 'I have a ' +this.brand + 'with '+this.number +'number';
+        }
+    }
+
+    class model extends Car{
+      constructor(name,number,mod){
+        // The super() method calls the constructor of the parent class.
+        super(name,number);
+        this.model = mod;
+      }
+      show(){
+        return this.present() + ' , it is a ' +this.model;
+      }
+    }
+
+    const mycar = new model ("Ford","1234","Mustang");
+    document.write(mycar.show());
+
+
+
+    </script>
+    </body>
+  </html>
+
+
+<!-- <!DOCTYPE html> 
+<html> 
+ 
+<body> 
+   
+<script> 
+class Car { 
+  constructor(name) { 
+    this.brand = name; 
+  } 
+ 
+  present() { 
+    return 'I have a ' + this.brand; 
+  } 
+} 
+ 
+class Model extends Car { 
+  constructor(name, mod) { 
+    super(name); 
+    this.model = mod; 
+  }   
+  show() { 
+    return this.present() + ', it is a ' + this.model 
+  } 
+} 
+ 
+const mycar = new Model("Ford", "Mustang"); 
+document.write(mycar.show()); 
+</script> 
+ 
+</body> 
+</html>  -->

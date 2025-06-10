@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+    <h1>JavaScript Objects</h1>
+
+    <p id="demo"></p>
+    <script>
+
+        const Animal = {
+            type:"Inverterbrates",
+            displayType(){
+                document.getElementById('demo').innerHTML += this.type + '<br>';
+                console.log(this.type);
+            },
+        };
+
+        const animal1= Object.create(Animal);
+        animal1.displayType();
+
+        const fish = Object.create(Animal);
+        fish.type = "Fish";
+        fish.displayType();
+
+    </script>
+</body>
