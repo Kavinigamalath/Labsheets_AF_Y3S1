@@ -1,0 +1,64 @@
+### **Git Basics - Quick Reference Guide**  
+
+#### **1. Install & Setup Git**  
+- **Download Git**: [https://git-scm.com/downloads](https://git-scm.com/downloads)  
+- **Check version**:  
+  ```bash
+  git --version
+  ```
+- **Set username & email**:  
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "your.email@example.com"
+  ```
+- **Verify settings**:  
+  ```bash
+  git config --global user.name
+  git config user.email
+  ```
+
+#### **2. Clone a Repository**  
+```bash
+git clone [repository_url]  # Copies a remote repo to local
+```
+
+#### **3. Basic Git Commands**  
+| Command | Description |  
+|---------|-------------|  
+| `git init` | Initialize a new Git repo |  
+| `git status` | Check modified/unstaged files |  
+| `git add [file]` or `git add .` | Stage changes for commit |  
+| `git commit -m "message"` | Save changes with a message |
+| `git branch -M main`  | the git branch -M command is used to rename the current branch. The -M option stands for "move" or "rename." |
+| `git pull origin [branch]` | Fetch & merge remote changes |  
+| `git push origin [branch]` | Upload local changes to remote |  
+
+#### **4. Branching & Merging**  
+- **Create a branch**:  
+  ```bash
+  git branch [branch-name]
+  ```
+- **Switch branch**:  
+  ```bash
+  git checkout [branch-name]
+  ```
+- **Merge branches**:  
+  ```bash
+  git merge [branch-name]
+  ```
+
+#### **5. Other Useful Commands**  
+- Navigate directories: `cd [path]`  
+- Check remote repo link: `git remote -v`  
+- Set remote repo:  
+  ```bash
+  git remote add origin [repository_url]
+  ```
+
+### **Summary**  
+1. **Install Git** → **Set username/email** → **Clone repo**  
+2. **Workflow**:  
+   - `git init` → `git add` → `git commit` → `git push`  
+3. **Branching**: `git branch`, `git checkout`, `git merge`  
+
+This covers the essential Git commands for version control. 🚀

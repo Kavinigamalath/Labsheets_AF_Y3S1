@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Async JavaScript</title>
+  </head>
+  <body>
+    <script>
+      
+        function fetchData(url, callback) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    callback(null, xhr.responseText); // No error, pass data
+                } else {
+                    callback('Error: ' + xhr.status, null); // Error occurred
+                }
+            };
+            
+            xhr.onerror = function() {
+                callback('Network error', null);
+            };
+
+            xhr.send();
+        }
+
+        // Usage:
+        fetchData('https://jsonplaceholder.typicode.com/posts/1', function(error, data) {
+            if (error) {
+                console.error(error); // Log error
+            } else {
+                console.log(data); // Log response data
+            }
+        });
+
+
+    </script>
+  </body>
+</html>
