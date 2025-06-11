@@ -8,13 +8,19 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class SpringbootrestapiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootrestapiApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootrestapiApplication.class, args);
+    }
 
-	@GetMapping("/")
-	public String rootEndpoint(@RequestParam(value = "name", defaultValue = "world") String name){
-		return "Hello, " + name +" !";
-	}
+    // Default endpoint
+    @GetMapping("/")
+    public String rootEndpoint() {
+        return "Hello, world!";
+    }
 
+    // Parameterized endpoint
+    @GetMapping("/hello/{name}")
+    public String helloName(@PathVariable String name) {
+        return "Hello, " + name + "!";
+    }
 }
